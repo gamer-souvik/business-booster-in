@@ -1,55 +1,53 @@
-
 import { useState, useRef, useEffect } from 'react';
-
 const ContactSection = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     phone: '',
     service: '',
-    message: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll('.reveal-on-scroll');
-            elements.forEach((el, index) => {
-              setTimeout(() => {
-                el.classList.add('revealed');
-              }, index * 100);
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const elements = entry.target.querySelectorAll('.reveal-on-scroll');
+          elements.forEach((el, index) => {
+            setTimeout(() => {
+              el.classList.add('revealed');
+            }, index * 100);
+          });
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
     };
   }, []);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormState(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -59,18 +57,16 @@ const ContactSection = () => {
         email: '',
         phone: '',
         service: '',
-        message: '',
+        message: ''
       });
-      
+
       // Reset submission status after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
     }, 1500);
   };
-
-  return (
-    <section id="contact" className="section-padding bg-white" ref={sectionRef}>
+  return <section id="contact" className="section-padding bg-white" ref={sectionRef}>
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <p className="inline-block py-1 px-3 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full mb-4">
@@ -109,7 +105,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <p className="font-medium">Call Us</p>
-                    <p className="text-gray-600 mt-1">+1 (555) 123-4567</p>
+                    <p className="text-gray-600 mt-1">+(91) 9547465295</p>
                   </div>
                 </div>
                 
@@ -122,7 +118,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <p className="font-medium">Email Us</p>
-                    <p className="text-gray-600 mt-1">info@nextlevelagency.com</p>
+                    <p className="text-gray-600 mt-1">info@businessbooster.com</p>
                   </div>
                 </div>
                 
@@ -147,16 +143,7 @@ const ContactSection = () => {
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Full Name
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formState.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
-                  placeholder="John Doe"
-                />
+                <input type="text" id="name" name="name" value={formState.name} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition" placeholder="John Doe" />
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -164,31 +151,14 @@ const ContactSection = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
-                    placeholder="john@example.com"
-                  />
+                  <input type="email" id="email" name="email" value={formState.email} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition" placeholder="john@example.com" />
                 </div>
                 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     Phone Number
                   </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formState.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
-                    placeholder="+1 (555) 000-0000"
-                  />
+                  <input type="tel" id="phone" name="phone" value={formState.phone} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition" placeholder="+1 (555) 000-0000" />
                 </div>
               </div>
               
@@ -196,14 +166,7 @@ const ContactSection = () => {
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
                   Service You're Interested In
                 </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formState.service}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
-                >
+                <select id="service" name="service" value={formState.service} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition">
                   <option value="" disabled>Select a service</option>
                   <option value="ai-solutions">AI Solutions</option>
                   <option value="predictive-analytics">Predictive Analytics</option>
@@ -219,37 +182,20 @@ const ContactSection = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                   Your Message
                 </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formState.message}
-                  onChange={handleChange}
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition"
-                  placeholder="Tell us about your project or inquiry..."
-                ></textarea>
+                <textarea id="message" name="message" value={formState.message} onChange={handleChange} rows={4} required className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition" placeholder="Tell us about your project or inquiry..."></textarea>
               </div>
               
-              <button
-                type="submit"
-                disabled={isSubmitting || isSubmitted}
-                className="w-full py-3 px-6 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-70"
-              >
+              <button type="submit" disabled={isSubmitting || isSubmitted} className="w-full py-3 px-6 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-70">
                 {isSubmitting ? 'Sending...' : isSubmitted ? 'Message Sent!' : 'Send Message'}
               </button>
               
-              {isSubmitted && (
-                <div className="p-4 bg-green-50 text-green-800 rounded-md mt-4 animate-fade-in">
+              {isSubmitted && <div className="p-4 bg-green-50 text-green-800 rounded-md mt-4 animate-fade-in">
                   Thank you for reaching out! We'll get back to you as soon as possible.
-                </div>
-              )}
+                </div>}
             </form>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
