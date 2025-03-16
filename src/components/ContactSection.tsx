@@ -93,7 +93,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-4">
                     <p className="font-medium">Our Location</p>
-                    <p className="text-gray-600 mt-1">123 Innovation Drive, San Francisco, CA 94103</p>
+                    <p className="text-gray-600 mt-1">57/15 Dewangazi Road, Bally, Howrah, Pin-711201</p>
                   </div>
                 </div>
                 
