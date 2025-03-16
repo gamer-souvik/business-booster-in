@@ -1,11 +1,8 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -14,27 +11,18 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12',
-        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
-      )}
-    >
+  return <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12', isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent')}>
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           <a href="/" className="text-2xl font-semibold tracking-tight">
-            <span className="font-bold">NEXT</span>
-            <span className="font-light">LEVEL</span>
+            <span className="font-extrabold">BUSINESS BOOSTER</span>
+            <span className="text-xs font-extrabold text-left">.ORG</span>
           </a>
 
           <nav className="hidden md:block">
@@ -62,60 +50,44 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          <button
-            className="ml-auto md:ml-0 p-2 md:hidden"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
+          <button className="ml-auto md:ml-0 p-2 md:hidden" onClick={toggleMenu} aria-label="Toggle menu">
             <div className="w-6 flex flex-col gap-1.5">
-              <span
-                className={cn(
-                  'block h-0.5 bg-black transition-transform duration-300 ease-in-out',
-                  isMenuOpen ? 'translate-y-2 rotate-45' : ''
-                )}
-              ></span>
-              <span
-                className={cn(
-                  'block h-0.5 bg-black transition-opacity duration-300 ease-in-out',
-                  isMenuOpen ? 'opacity-0' : 'opacity-100'
-                )}
-              ></span>
-              <span
-                className={cn(
-                  'block h-0.5 bg-black transition-transform duration-300 ease-in-out',
-                  isMenuOpen ? '-translate-y-2 -rotate-45' : ''
-                )}
-              ></span>
+              <span className={cn('block h-0.5 bg-black transition-transform duration-300 ease-in-out', isMenuOpen ? 'translate-y-2 rotate-45' : '')}></span>
+              <span className={cn('block h-0.5 bg-black transition-opacity duration-300 ease-in-out', isMenuOpen ? 'opacity-0' : 'opacity-100')}></span>
+              <span className={cn('block h-0.5 bg-black transition-transform duration-300 ease-in-out', isMenuOpen ? '-translate-y-2 -rotate-45' : '')}></span>
             </div>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={cn(
-          'fixed inset-x-0 top-[60px] bg-white/95 backdrop-blur-md h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden',
-          isMenuOpen ? 'h-64 border-b border-gray-100' : ''
-        )}
-      >
+      <div className={cn('fixed inset-x-0 top-[60px] bg-white/95 backdrop-blur-md h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden', isMenuOpen ? 'h-64 border-b border-gray-100' : '')}>
         <div className="container px-6 py-8">
           <ul className="flex flex-col space-y-6">
-            <li className="opacity-0 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <li className="opacity-0 animate-fade-in" style={{
+            animationDelay: '0.1s'
+          }}>
               <a href="#services" className="text-lg font-medium" onClick={toggleMenu}>
                 Services
               </a>
             </li>
-            <li className="opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <li className="opacity-0 animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <a href="#about" className="text-lg font-medium" onClick={toggleMenu}>
                 About
               </a>
             </li>
-            <li className="opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <li className="opacity-0 animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <a href="#work" className="text-lg font-medium" onClick={toggleMenu}>
                 Work
               </a>
             </li>
-            <li className="opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <li className="opacity-0 animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               <a href="#contact" className="text-lg font-medium" onClick={toggleMenu}>
                 Contact
               </a>
@@ -123,8 +95,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Navbar;
