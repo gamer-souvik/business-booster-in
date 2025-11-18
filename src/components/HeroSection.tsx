@@ -27,37 +27,37 @@ const HeroSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-white to-gray-50"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-background to-secondary cyber-grid"
     >
       {/* Abstract shapes in background */}
-      <div className="absolute inset-0 overflow-hidden opacity-40">
-        <div className="absolute -top-96 -right-96 w-[800px] h-[800px] rounded-full bg-gradient-to-tr from-blue-50 to-blue-100 animate-float" style={{animationDuration: '15s'}}></div>
-        <div className="absolute top-1/4 -left-96 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-gray-50 to-gray-100 animate-float" style={{animationDuration: '20s', animationDelay: '2s'}}></div>
-        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-gray-50 to-gray-100 animate-float" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute -top-96 -right-96 w-[800px] h-[800px] rounded-full bg-gradient-to-tr from-primary/30 to-accent/30 animate-float premium-glow" style={{animationDuration: '15s'}}></div>
+        <div className="absolute top-1/4 -left-96 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-accent/20 to-primary/20 animate-float premium-glow" style={{animationDuration: '20s', animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-primary/30 to-accent/30 animate-float premium-glow" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="staggered-fade-in space-y-8">
-            <p className="inline-block py-1 px-3 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">
+            <p className="inline-block py-1 px-3 bg-primary/10 text-primary text-xs font-semibold rounded-full neon-border">
               AI + DIGITAL MARKETING
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
               Transform Your <span className="text-gradient">Digital Presence</span> With AI
             </h1>
-            <p className="text-gray-600 text-lg md:text-xl max-w-lg">
+            <p className="text-muted-foreground text-lg md:text-xl max-w-lg">
               Combining cutting-edge AI technology with strategic digital marketing to help your business reach its full potential.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
               <a
                 href="#services"
-                className="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-900 transition-all duration-300 text-center"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-all duration-300 text-center premium-glow"
               >
                 Explore Services
               </a>
               <a
                 href="#contact"
-                className="bg-white border border-gray-200 text-gray-800 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition-all duration-300 text-center"
+                className="glass-effect text-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/50 transition-all duration-300 text-center neon-border"
               >
                 Get in Touch
               </a>
@@ -67,7 +67,7 @@ const HeroSection = () => {
           <div className="relative h-[400px] md:h-[500px] reveal-on-scroll">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative">
-                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl bg-white opacity-0 animate-blur-in" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
+                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl glass-effect opacity-0 animate-blur-in premium-glow" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
                   <img 
                     src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" 
                     alt="Digital marketing dashboard" 
