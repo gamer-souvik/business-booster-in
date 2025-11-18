@@ -101,17 +101,17 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" className="section-padding bg-white" ref={sectionRef}>
+    <section id="services" className="section-padding bg-secondary/30" ref={sectionRef}>
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-          <p className="inline-block py-1 px-3 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full mb-4">
+          <p className="inline-block py-1 px-3 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4 neon-border">
             OUR SERVICES
           </p>
-          <h2 className="text-4xl font-bold mb-6">
-            Comprehensive Solutions for the Digital Age
+          <h2 className="text-4xl font-bold mb-6 text-gradient">
+            Comprehensive AI & Digital Marketing Solutions
           </h2>
-          <p className="text-gray-600">
-            We offer a full suite of AI-powered services and digital marketing strategies designed to elevate your brand and drive measurable results.
+          <p className="text-muted-foreground">
+            Empowering businesses with intelligent automation and data-driven marketing strategies that deliver real results.
           </p>
         </div>
 
@@ -119,16 +119,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl border border-gray-100 hover:shadow-xl transition-all duration-300 bg-white reveal-on-scroll animated-card"
+              className="p-6 rounded-xl border border-border glass-effect hover:shadow-xl transition-all duration-300 reveal-on-scroll animated-card premium-glow"
             >
-              <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-5">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 text-primary">
                 {service.icon}
               </div>
-              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                 {service.category}
               </span>
               <h3 className="text-xl font-semibold mt-2 mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <p className="text-muted-foreground">{service.description}</p>
             </div>
           ))}
         </div>
@@ -136,7 +136,7 @@ const ServicesSection = () => {
         <div className="mt-16 text-center reveal-on-scroll">
           <a
             href="#contact"
-            className="px-6 py-3 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors duration-300 inline-flex items-center"
+            className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-colors duration-300 inline-flex items-center premium-glow"
           >
             <span>Talk to our specialists</span>
             <svg
