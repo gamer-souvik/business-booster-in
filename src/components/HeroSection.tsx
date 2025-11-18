@@ -1,5 +1,6 @@
-
 import { useEffect, useRef } from 'react';
+import heroDashboard from '@/assets/hero-dashboard.jpg';
+import heroAI from '@/assets/hero-ai.jpg';
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -69,15 +70,15 @@ const HeroSection = () => {
               <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative">
                 <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl glass-effect opacity-0 animate-blur-in premium-glow" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
                   <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" 
-                    alt="Digital marketing dashboard" 
+                    src={heroDashboard} 
+                    alt="Futuristic AI digital marketing dashboard with holographic interfaces" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-6 w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-2xl overflow-hidden shadow-2xl opacity-0 animate-rotate-in" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
                   <img 
-                    src="https://images.unsplash.com/photo-1468436139062-f60a71c5c892?auto=format&fit=crop&w=800&q=80" 
-                    alt="AI visualization" 
+                    src={heroAI} 
+                    alt="Abstract AI neural network visualization with glowing connections" 
                     className="w-full h-full object-cover"
                   />
                 </div>
