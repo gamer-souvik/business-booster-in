@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import heroDashboard from '@/assets/hero-dashboard.jpg';
+import heroAI from '@/assets/hero-ai.jpg';
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -26,59 +28,60 @@ const HeroSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-background via-secondary to-background"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-background to-secondary cyber-grid"
     >
-      {/* Neon corner accents */}
-      <div className="neon-corner top-left"></div>
-      <div className="neon-corner top-right"></div>
-      <div className="neon-corner bottom-left"></div>
-      <div className="neon-corner bottom-right"></div>
-      
       {/* Abstract shapes in background */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute -top-96 -right-96 w-[800px] h-[800px] rounded-full bg-gradient-to-tr from-primary/40 to-accent/40 animate-float premium-glow" style={{animationDuration: '15s'}}></div>
-        <div className="absolute top-1/4 -left-96 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-accent/30 to-primary/30 animate-float premium-glow" style={{animationDuration: '20s', animationDelay: '2s'}}></div>
-        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-primary/40 to-accent/40 animate-float premium-glow" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
+      <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute -top-96 -right-96 w-[800px] h-[800px] rounded-full bg-gradient-to-tr from-primary/30 to-accent/30 animate-float premium-glow" style={{animationDuration: '15s'}}></div>
+        <div className="absolute top-1/4 -left-96 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-accent/20 to-primary/20 animate-float premium-glow" style={{animationDuration: '20s', animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-tr from-primary/30 to-accent/30 animate-float premium-glow" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="staggered-fade-in space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight uppercase">
-              <span className="text-gradient block" style={{ letterSpacing: '0.05em' }}>BUSINESS</span>
-              <span className="text-gradient block" style={{ letterSpacing: '0.05em' }}>BOOSTER</span>
+            <p className="inline-block py-1 px-3 bg-primary/10 text-primary text-xs font-semibold rounded-full neon-border">
+              AI + DIGITAL MARKETING
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+              Transform Your <span className="text-gradient">Digital Presence</span> With AI
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg max-w-lg">
-              Experience the next generation of AI-powered digital marketing with cutting-edge strategy and innovation.
+            <p className="text-muted-foreground text-lg md:text-xl max-w-lg">
+              Combining cutting-edge AI technology with strategic digital marketing to help your business reach its full potential.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
               <a
                 href="#services"
-                className="group relative bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-md font-semibold uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-center overflow-hidden"
-                style={{ boxShadow: 'var(--neon-border)' }}
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-all duration-300 text-center premium-glow"
               >
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  Explore Services
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
+                Explore Services
+              </a>
+              <a
+                href="#contact"
+                className="glass-effect text-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/50 transition-all duration-300 text-center neon-border"
+              >
+                Get in Touch
               </a>
             </div>
           </div>
           
           <div className="relative h-[400px] md:h-[500px] reveal-on-scroll">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-full rounded-2xl overflow-hidden glass-effect premium-glow">
-                <iframe 
-                  src='https://my.spline.design/nexbotrobotcharacterconcept-mjuLUuzezmWUuwhH3UDK3S0W/' 
-                  frameBorder='0' 
-                  width='100%' 
-                  height='100%'
-                  title="Interactive 3D AI Robot"
-                  className="opacity-0 animate-blur-in"
-                  style={{animationDelay: '0.3s', animationDuration: '0.8s'}}
-                ></iframe>
+              <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative">
+                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl glass-effect opacity-0 animate-blur-in premium-glow" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
+                  <img 
+                    src={heroDashboard} 
+                    alt="Futuristic AI digital marketing dashboard with holographic interfaces" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-6 w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-2xl overflow-hidden shadow-2xl opacity-0 animate-rotate-in" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
+                  <img 
+                    src={heroAI} 
+                    alt="Abstract AI neural network visualization with glowing connections" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
