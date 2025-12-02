@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import businessBoosterHero from '@/assets/business-booster-hero.jpg';
+import heroDashboard from '@/assets/hero-dashboard.jpg';
+import heroAI from '@/assets/hero-ai.jpg';
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -66,15 +67,21 @@ const HeroSection = () => {
           
           <div className="relative h-[400px] md:h-[500px] reveal-on-scroll">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div
-                className="w-full max-w-2xl aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl glass-effect opacity-0 animate-blur-in premium-glow"
-                style={{ animationDelay: '0.4s', animationDuration: '0.9s' }}
-              >
-                <img
-                  src={businessBoosterHero}
-                  alt="Business Booster futuristic AI avatar with neon glow"
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative">
+                <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl glass-effect opacity-0 animate-blur-in premium-glow" style={{animationDelay: '0.3s', animationDuration: '0.8s'}}>
+                  <img 
+                    src={heroDashboard} 
+                    alt="Futuristic AI digital marketing dashboard with holographic interfaces" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-6 w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-2xl overflow-hidden shadow-2xl opacity-0 animate-rotate-in" style={{animationDelay: '0.6s', animationDuration: '0.8s'}}>
+                  <img 
+                    src={heroAI} 
+                    alt="Abstract AI neural network visualization with glowing connections" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
