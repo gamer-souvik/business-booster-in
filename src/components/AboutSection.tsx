@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
-import teamCollaboration from '@/assets/team-collaboration.jpg';
-import digitalWorkspace from '@/assets/digital-workspace.jpg';
+import businessBoosterHero from '@/assets/business-booster-hero-main.jpg';
 
 const stats = [
   { value: '95%', label: 'Client Retention' },
@@ -84,15 +83,15 @@ const AboutSection = () => {
             <div className="relative">
               <div className="w-full h-80 md:h-96 rounded-2xl overflow-hidden glass-effect premium-glow">
                 <img
-                  src={teamCollaboration}
-                  alt="Futuristic tech team collaborating with holographic AI displays"
+                  src={businessBoosterHero}
+                  alt="Business Booster futuristic AI helmet with neon glow"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 w-64 h-40 rounded-lg overflow-hidden border-4 border-background shadow-xl premium-glow">
                 <img
-                  src={digitalWorkspace}
-                  alt="Premium digital workspace with advanced AI interfaces"
+                  src={businessBoosterHero}
+                  alt="Business Booster futuristic AI helmet detail in digital workspace"
                   className="w-full h-full object-cover"
                 />
               </div>
