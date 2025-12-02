@@ -17,42 +17,42 @@
     --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 315 86% 60%;
     --primary-foreground: 222 47% 11%;
 
-    --secondary: 217 33% 17%;
+    --secondary: 253 39% 16%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 253 39% 16%;
+    --muted-foreground: 215 20% 70%;
 
-    --accent: 270 91% 65%;
+    --accent: 280 88% 68%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
+    --border: 253 39% 24%;
+    --input: 253 39% 24%;
+    --ring: 315 86% 60%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 222 47% 11%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary: 315 86% 60%;
     --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent: 253 39% 16%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-border: 253 39% 24%;
+    --sidebar-ring: 315 86% 60%;
 
     /* Futuristic enhancements */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 91% 65%));
-    --gradient-dark: linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 8%));
-    --glow-primary: 0 0 20px hsl(217 91% 60% / 0.5);
-    --glow-accent: 0 0 20px hsl(270 91% 65% / 0.5);
-    --shadow-premium: 0 20px 60px -15px hsl(217 91% 60% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-dark: linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 6%));
+    --glow-primary: 0 0 24px hsl(var(--primary) / 0.55);
+    --glow-accent: 0 0 24px hsl(var(--accent) / 0.55);
+    --shadow-premium: 0 20px 60px -15px hsl(var(--primary) / 0.3);
   }
 
   .dark {
@@ -94,7 +94,14 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 8%));
+    background:
+      radial-gradient(ellipse at top left, hsl(280 88% 18% / 0.85), transparent 60%),
+      radial-gradient(ellipse at bottom right, hsl(315 86% 24% / 0.85), transparent 55%),
+      linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 6%)),
+      url('./assets/business-booster-bg.jpg');
+    background-size: 120% 120%, 120% 120%, cover, cover;
+    background-position: top left, bottom right, center, center;
+    background-attachment: fixed;
     min-height: 100vh;
   }
 
