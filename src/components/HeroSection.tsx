@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import businessBoosterHero from '@/assets/business-booster-hero-main.jpg';
+import businessBoosterBg from '@/assets/business-booster-bg.jpg';
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -27,7 +27,7 @@ const HeroSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-b from-background/90 to-secondary/90"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-background to-secondary cyber-grid"
     >
       {/* Abstract shapes in background */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -38,39 +38,29 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 md:px-12 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative reveal-on-scroll">
-            <div className="absolute inset-0 -z-10 rounded-3xl overflow-hidden opacity-40 premium-glow">
-              <img
-                src={businessBoosterHero}
-                alt="Business Booster futuristic AI helmet behind digital presence with AI"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="staggered-fade-in space-y-8 px-6 py-8 md:px-10 glass-effect">
-              <p className="inline-block py-1 px-3 bg-primary/10 text-primary text-xs font-semibold rounded-full neon-border">
-                AI + DIGITAL MARKETING
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                Transform Your <span className="text-gradient">Digital Presence</span> With AI
-              </h1>
-              <p className="text-muted-foreground text-lg md:text-xl max-w-lg">
-                Combining cutting-edge AI technology with strategic digital marketing to help your business reach its full potential.
-              </p>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-                <a
-                  href="#services"
-                  className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-all duration-300 text-center premium-glow"
-                >
-                  Explore Services
-                </a>
-                <a
-                  href="#contact"
-                  className="glass-effect text-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/50 transition-all duration-300 text-center neon-border"
-                >
-                  Get in Touch
-                </a>
-              </div>
+          <div className="staggered-fade-in space-y-8">
+            <p className="inline-block py-1 px-3 bg-primary/10 text-primary text-xs font-semibold rounded-full neon-border">
+              AI + DIGITAL MARKETING
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+              Transform Your <span className="text-gradient">Digital Presence</span> With AI
+            </h1>
+            <p className="text-muted-foreground text-lg md:text-xl max-w-lg">
+              Combining cutting-edge AI technology with strategic digital marketing to help your business reach its full potential.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+              <a
+                href="#services"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-all duration-300 text-center premium-glow"
+              >
+                Explore Services
+              </a>
+              <a
+                href="#contact"
+                className="glass-effect text-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/50 transition-all duration-300 text-center neon-border"
+              >
+                Get in Touch
+              </a>
             </div>
           </div>
           
