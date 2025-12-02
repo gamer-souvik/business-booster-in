@@ -64,18 +64,6 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative h-[400px] md:h-[500px] reveal-on-scroll">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full max-w-[640px] aspect-[16/9] rounded-3xl overflow-hidden glass-effect neon-border premium-glow opacity-0 animate-blur-in" style={{ animationDelay: '0.3s', animationDuration: '0.9s' }}>
-                <img
-                  src={businessBoosterBg}
-                  alt="Business Booster futuristic AI helmet with neon glow"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
         </div>
         
         <div className="mt-20 md:mt-32 flex justify-center">
