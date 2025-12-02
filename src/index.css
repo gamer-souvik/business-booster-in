@@ -98,7 +98,7 @@
       radial-gradient(ellipse at top left, hsl(280 88% 18% / 0.85), transparent 60%),
       radial-gradient(ellipse at bottom right, hsl(315 86% 24% / 0.85), transparent 55%),
       linear-gradient(180deg, hsl(222 47% 11%), hsl(222 47% 6%)),
-      url('./assets/business-booster-bg.jpg');
+      url('./assets/business-booster-main-bg.jpg');
     background-size: 120% 120%, 120% 120%, cover, cover;
     background-position: top left, bottom right, center, center;
     background-attachment: fixed;
