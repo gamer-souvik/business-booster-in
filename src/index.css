@@ -8,81 +8,81 @@
 
 @layer base {
   :root {
-    --background: 220 65% 5%;
+    --background: 222 84% 4%;
     --foreground: 210 40% 96%;
 
-    --card: 220 55% 7%;
+    --card: 222 70% 6%;
     --card-foreground: 210 40% 96%;
 
-    --popover: 220 55% 7%;
+    --popover: 222 70% 6%;
     --popover-foreground: 210 40% 96%;
 
-    --primary: 190 95% 60%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 215 100% 60%;
+    --primary-foreground: 222 84% 4%;
 
-    --secondary: 220 40% 14%;
+    --secondary: 220 45% 14%;
     --secondary-foreground: 210 40% 96%;
 
-    --muted: 220 35% 18%;
-    --muted-foreground: 215 20% 72%;
+    --muted: 220 35% 20%;
+    --muted-foreground: 215 20% 75%;
 
-    --accent: 300 90% 65%;
-    --accent-foreground: 210 40% 96%;
+    --accent: 195 100% 65%;
+    --accent-foreground: 222 84% 4%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 45% 18%;
-    --input: 220 45% 18%;
-    --ring: 190 95% 60%;
+    --border: 220 50% 22%;
+    --input: 220 50% 22%;
+    --ring: 215 100% 60%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 220 65% 5%;
+    --sidebar-background: 222 84% 4%;
     --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 190 95% 60%;
-    --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 220 40% 14%;
+    --sidebar-primary: 215 100% 60%;
+    --sidebar-primary-foreground: 222 84% 4%;
+    --sidebar-accent: 220 45% 14%;
     --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 220 45% 18%;
-    --sidebar-ring: 190 95% 60%;
+    --sidebar-border: 220 50% 22%;
+    --sidebar-ring: 215 100% 60%;
 
     /* Futuristic enhancements */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-dark: linear-gradient(180deg, hsl(220 65% 7%), hsl(220 60% 3%));
-    --glow-primary: 0 0 24px hsl(var(--primary) / 0.55);
-    --glow-accent: 0 0 24px hsl(var(--accent) / 0.55);
-    --shadow-premium: 0 20px 60px -15px hsl(var(--primary) / 0.3);
+    --gradient-dark: linear-gradient(180deg, hsl(222 84% 8%), hsl(222 84% 2%));
+    --glow-primary: 0 0 28px hsl(var(--primary) / 0.65);
+    --glow-accent: 0 0 28px hsl(var(--accent) / 0.6);
+    --shadow-premium: 0 25px 80px -20px hsl(var(--primary) / 0.55);
   }
 
   .dark {
-    --background: 220 65% 5%;
+    --background: 222 84% 4%;
     --foreground: 210 40% 96%;
 
-    --card: 220 55% 7%;
+    --card: 222 70% 6%;
     --card-foreground: 210 40% 96%;
 
-    --popover: 220 55% 7%;
+    --popover: 222 70% 6%;
     --popover-foreground: 210 40% 96%;
 
-    --primary: 190 95% 60%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 215 100% 60%;
+    --primary-foreground: 222 84% 4%;
 
-    --secondary: 220 40% 14%;
+    --secondary: 220 45% 14%;
     --secondary-foreground: 210 40% 96%;
 
-    --muted: 220 35% 18%;
-    --muted-foreground: 215 20% 72%;
+    --muted: 220 35% 20%;
+    --muted-foreground: 215 20% 75%;
 
-    --accent: 300 90% 65%;
-    --accent-foreground: 210 40% 96%;
+    --accent: 195 100% 65%;
+    --accent-foreground: 222 84% 4%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 45% 18%;
-    --input: 220 45% 18%;
-    --ring: 190 95% 60%;
+    --border: 220 50% 22%;
+    --input: 220 50% 22%;
+    --ring: 215 100% 60%;
   }
 }
 
@@ -95,11 +95,11 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
     background:
-      radial-gradient(ellipse at top left, hsl(190 95% 20% / 0.85), transparent 60%),
-      radial-gradient(ellipse at bottom right, hsl(300 90% 26% / 0.85), transparent 55%),
-      linear-gradient(180deg, hsl(220 65% 7%), hsl(220 60% 3%)),
+      radial-gradient(ellipse at top left, hsl(215 100% 35% / 0.9), transparent 60%),
+      radial-gradient(ellipse at bottom right, hsl(195 100% 30% / 0.9), transparent 55%),
+      linear-gradient(180deg, hsl(222 84% 8%), hsl(222 84% 2%)),
       url('./assets/business-booster-main-bg.jpg');
-    background-size: 140% 140%, 140% 140%, cover, cover;
+    background-size: 160% 160%, 160% 160%, cover, cover;
     background-position: top left, bottom right, center, center;
     background-attachment: fixed;
     min-height: 100vh;
@@ -135,7 +135,7 @@
   }
 
   .premium-glow {
-    box-shadow: 0 0 30px hsl(var(--primary) / 0.3), 0 0 60px hsl(var(--accent) / 0.2);
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 90px hsl(var(--accent) / 0.45);
   }
 
   .staggered-fade-in > * {
@@ -165,8 +165,8 @@
 
   .cyber-grid {
     background-image: 
-      linear-gradient(hsl(var(--primary) / 0.12) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.12) 1px, transparent 1px);
+      linear-gradient(hsl(var(--primary) / 0.16) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.16) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
