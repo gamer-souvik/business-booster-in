@@ -169,4 +169,52 @@
       linear-gradient(90deg, hsl(217 91% 60% / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  .btn-premium {
+    @apply relative inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-semibold text-primary-foreground shadow-lg transition-all duration-300;
+    background-image: var(--gradient-primary);
+    box-shadow: var(--shadow-premium), 0 0 30px hsl(var(--accent) / 0.35);
+    border: 1px solid hsl(var(--primary) / 0.4);
+    overflow: hidden;
+  }
+
+  .btn-premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, hsl(0 0% 100% / 0.15), transparent 40%, transparent 60%, hsl(0 0% 100% / 0.15));
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+  }
+
+  .btn-premium:hover::before {
+    opacity: 1;
+    transform: translateX(30%);
+  }
+
+  .btn-ghost-premium {
+    @apply relative inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-semibold text-foreground border bg-background/5 transition-all duration-300;
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 24px hsl(var(--primary) / 0.25);
+    overflow: hidden;
+  }
+
+  .btn-ghost-premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, hsl(var(--primary) / 0.25), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .btn-ghost-premium:hover::before {
+    opacity: 1;
+  }
 }
+

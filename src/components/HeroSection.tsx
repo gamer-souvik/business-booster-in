@@ -51,13 +51,13 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
               <a
                 href="#services"
-                className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-all duration-300 text-center premium-glow"
+                className="btn-premium hover-scale text-center"
               >
                 Explore Services
               </a>
               <a
                 href="#contact"
-                className="glass-effect text-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/50 transition-all duration-300 text-center neon-border"
+                className="btn-ghost-premium hover-scale text-center"
               >
                 Get in Touch
               </a>
