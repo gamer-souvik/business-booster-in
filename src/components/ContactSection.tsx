@@ -185,7 +185,7 @@ const ContactSection = () => {
                 <textarea id="message" name="message" value={formState.message} onChange={handleChange} rows={4} required className="w-full px-4 py-3 bg-secondary border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition text-foreground" placeholder="Tell us about your project or inquiry..."></textarea>
               </div>
               
-              <button type="submit" disabled={isSubmitting || isSubmitted} className="w-full py-3 px-6 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70 premium-glow">
+              <button type="submit" disabled={isSubmitting || isSubmitted} className="btn-premium w-full justify-center hover-scale focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary disabled:opacity-70">
                 {isSubmitting ? 'Sending...' : isSubmitted ? 'Message Sent!' : 'Send Message'}
               </button>
               

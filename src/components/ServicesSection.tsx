@@ -136,7 +136,7 @@ const ServicesSection = () => {
         <div className="mt-16 text-center reveal-on-scroll">
           <a
             href="#contact"
-            className="px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-colors duration-300 inline-flex items-center premium-glow"
+            className="btn-premium inline-flex items-center gap-2 hover-scale"
           >
             <span>Talk to our specialists</span>
             <svg
