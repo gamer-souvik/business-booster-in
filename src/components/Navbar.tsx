@@ -35,7 +35,7 @@ const Navbar = () => {
             <span className="text-2xl font-light tracking-wider font-cyber text-foreground">
               BOOSTER
             </span>
-            <span className="text-xs font-bold text-accent neon-text-magenta">.ORG</span>
+            <span className="text-xs font-bold text-accent neon-text-magenta">.IN</span>
           </a>
 
           <nav className="hidden md:block">
