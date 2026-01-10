@@ -3,8 +3,8 @@ import { useEffect, useRef } from 'react';
 const services = [
   {
     category: 'AI SERVICES',
-    title: 'Custom AI Solutions',
-    description: 'Tailor-made AI applications that solve your unique business challenges and automate complex processes.',
+    title: 'AI Automation for Business',
+    description: 'Streamline operations with intelligent automation that handles repetitive tasks and scales your business efficiency.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
         <path d="M12 2a3 3 0 0 0-3 3v1H4.5a1.5 1.5 0 0 0-1.5 1.5v12a1.5 1.5 0 0 0 1.5 1.5h15a1.5 1.5 0 0 0 1.5-1.5v-12a1.5 1.5 0 0 0-1.5-1.5H15V5a3 3 0 0 0-3-3Z" />
@@ -15,62 +15,100 @@ const services = [
   },
   {
     category: 'AI SERVICES',
-    title: 'Predictive Analytics',
-    description: 'Leverage machine learning algorithms to forecast trends and make data-driven decisions for your business.',
+    title: 'AI Agents',
+    description: 'Deploy autonomous AI agents that learn, adapt, and execute complex tasks to drive your business forward.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-        <path d="M3 3v18h18" />
-        <path d="m19 9-5 5-4-4-3 3" />
+        <circle cx="12" cy="8" r="5" />
+        <path d="M20 21a8 8 0 1 0-16 0" />
       </svg>
     ),
     color: 'magenta',
   },
   {
     category: 'AI SERVICES',
-    title: 'Natural Language Processing',
-    description: 'Implement conversational AI, sentiment analysis, and text processing for enhanced customer interactions.',
+    title: 'Voice Calling Agents',
+    description: 'AI-powered voice agents that handle customer calls, appointments, and support with human-like conversation.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+    ),
+    color: 'cyan',
+  },
+  {
+    category: 'AI SERVICES',
+    title: 'AI UGC Videos',
+    description: 'Generate authentic user-generated content style videos powered by AI for marketing and social media.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+        <polygon points="23 7 16 12 23 17 23 7" />
+        <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+      </svg>
+    ),
+    color: 'magenta',
+  },
+  {
+    category: 'DEVELOPMENT',
+    title: 'Web Apps Development',
+    description: 'Build powerful, scalable web applications with modern technologies and seamless user experiences.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
+      </svg>
+    ),
+    color: 'cyan',
+  },
+  {
+    category: 'DEVELOPMENT',
+    title: 'App Development',
+    description: 'Native and cross-platform mobile apps that deliver exceptional performance and user engagement.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+        <line x1="12" y1="18" x2="12.01" y2="18" />
+      </svg>
+    ),
+    color: 'magenta',
+  },
+  {
+    category: 'DEVELOPMENT',
+    title: 'Website Development',
+    description: 'Stunning, responsive websites that captivate visitors and convert them into loyal customers.',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+      </svg>
+    ),
+    color: 'cyan',
+  },
+  {
+    category: 'AI SERVICES',
+    title: 'AI Chatbots',
+    description: 'Intelligent conversational bots that provide 24/7 customer support and boost engagement rates.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
     ),
-    color: 'cyan',
-  },
-  {
-    category: 'DIGITAL MARKETING',
-    title: 'SEO Optimization',
-    description: 'Enhance your online visibility with data-driven SEO strategies that drive organic traffic and improve rankings.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-        <circle cx="11" cy="11" r="8" />
-        <path d="m21 21-4.3-4.3" />
-      </svg>
-    ),
     color: 'magenta',
   },
   {
-    category: 'DIGITAL MARKETING',
-    title: 'Content Marketing',
-    description: 'Create engaging, valuable content that resonates with your audience and drives conversion across channels.',
+    category: 'AI SERVICES',
+    title: 'Custom GPT',
+    description: 'Tailored GPT solutions trained on your data to provide specialized AI assistance for your business.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-        <polyline points="14 2 14 8 20 8" />
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
       </svg>
     ),
     color: 'cyan',
-  },
-  {
-    category: 'DIGITAL MARKETING',
-    title: 'Social Media Strategy',
-    description: 'Develop a comprehensive social media presence that builds community and drives engagement with your brand.',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-      </svg>
-    ),
-    color: 'magenta',
   },
 ];
 
