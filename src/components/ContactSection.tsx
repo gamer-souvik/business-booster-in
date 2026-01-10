@@ -211,13 +211,16 @@ const ContactSection = () => {
                   required
                   className="input-cyber bg-background"
                 >
-                  <option value="" disabled>Select a service</option>
-                  <option value="ai-solutions">AI Solutions</option>
-                  <option value="predictive-analytics">Predictive Analytics</option>
-                  <option value="nlp">Natural Language Processing</option>
-                  <option value="seo">SEO Optimization</option>
-                  <option value="content-marketing">Content Marketing</option>
-                  <option value="social-media">Social Media Strategy</option>
+                <option value="" disabled>Select a service</option>
+                  <option value="ai-automation">AI Automation for Business</option>
+                  <option value="ai-agents">AI Agents</option>
+                  <option value="voice-calling-agents">Voice Calling Agents</option>
+                  <option value="ai-ugc-videos">AI UGC Videos</option>
+                  <option value="web-apps">Web Apps Development</option>
+                  <option value="app-development">App Development</option>
+                  <option value="website-development">Website Development</option>
+                  <option value="ai-chatbots">AI Chatbots</option>
+                  <option value="custom-gpt">Custom GPT</option>
                   <option value="other">Other</option>
                 </select>
               </div>

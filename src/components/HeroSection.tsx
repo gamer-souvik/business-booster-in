@@ -95,7 +95,7 @@ const HeroSection = () => {
               <a href="#services" className="btn-cyber hover-scale">
                 <span className="relative z-10">EXPLORE SERVICES</span>
               </a>
-              <a href="#contact" className="btn-cyber-outline hover-scale">
+              <a href="https://wa.me/+919932702906" target="_blank" rel="noopener noreferrer" className="btn-cyber-outline hover-scale">
                 <span className="relative z-10">GET IN TOUCH</span>
               </a>
             </div>
