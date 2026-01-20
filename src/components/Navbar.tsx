@@ -40,7 +40,7 @@ const Navbar = () => {
 
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
-              {['Services', 'About', 'Work', 'Contact'].map((item) => (
+              {['Services', 'About', 'Testimonials', 'Contact'].map((item) => (
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase()}`} 
@@ -87,11 +87,11 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={cn(
         'fixed inset-x-0 top-[72px] glass-effect overflow-hidden transition-all duration-500 ease-out md:hidden',
-        isMenuOpen ? 'h-80 border-b border-primary/30' : 'h-0'
+        isMenuOpen ? 'h-96 border-b border-primary/30' : 'h-0'
       )}>
         <div className="container px-6 py-8">
           <ul className="flex flex-col gap-6">
-            {['Services', 'About', 'Work', 'Contact'].map((item, index) => (
+            {['Services', 'About', 'Testimonials', 'Contact'].map((item, index) => (
               <li 
                 key={item}
                 className="opacity-0 animate-fade-in"
