@@ -62,14 +62,14 @@ const teamMembers: TeamMember[] = [
 const slides = [founders, teamMembers];
 
 const TeamMemberCard = ({ member }: { member: TeamMember }) => (
-  <div className="cyber-card group p-0 overflow-hidden animated-card">
+  <div className="cyber-card group p-0 overflow-hidden animated-card h-full flex flex-col">
     {/* Photo */}
-    <div className="relative h-64 overflow-hidden">
+    <div className="relative aspect-[3/4] overflow-hidden">
       {member.image ? (
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted">
@@ -87,7 +87,7 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => (
     </div>
 
     {/* Info */}
-    <div className="p-5">
+    <div className="p-5 flex-1 flex flex-col">
       <h4 className="text-lg font-bold font-cyber text-foreground mb-2">{member.name}</h4>
       <p className="text-sm text-muted-foreground leading-relaxed mb-4">{member.description}</p>
 
