@@ -40,7 +40,7 @@ const Navbar = () => {
 
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
-              {['Services', 'About', 'Testimonials', 'Contact'].map((item) => (
+              {['Services', 'About', 'Team', 'Testimonials', 'Contact'].map((item) => (
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase()}`} 
@@ -91,7 +91,7 @@ const Navbar = () => {
       )}>
         <div className="container px-6 py-8">
           <ul className="flex flex-col gap-6">
-            {['Services', 'About', 'Testimonials', 'Contact'].map((item, index) => (
+            {['Services', 'About', 'Team', 'Testimonials', 'Contact'].map((item, index) => (
               <li 
                 key={item}
                 className="opacity-0 animate-fade-in"
