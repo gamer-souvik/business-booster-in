@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Linkedin, Twitter, Instagram } from 'lucide-react';
 import founderImg from '@/assets/founder.jpg';
 import cofounderImg from '@/assets/cofounder.jpg';
+import teamMember1Img from '@/assets/team-member-1.png';
+import teamMember2Img from '@/assets/team-member-2.png';
+import teamMember3Img from '@/assets/team-member-3.png';
 
 interface TeamMember {
   name: string;
@@ -33,21 +36,21 @@ const teamMembers: TeamMember[] = [
     name: "Ananya Roy",
     role: "Lead Developer",
     description: "Full-stack wizard crafting seamless web applications with modern frameworks. Turns complex problems into elegant, performant solutions.",
-    image: "",
+    image: teamMember1Img,
     socials: { linkedin: "#", twitter: "#" },
   },
   {
     name: "Vikram Singh",
     role: "UI/UX Designer",
     description: "Creative designer with a keen eye for aesthetics and user experience. Transforms ideas into visually stunning and intuitive interfaces.",
-    image: "",
+    image: teamMember2Img,
     socials: { linkedin: "#", instagram: "#" },
   },
   {
     name: "Sneha Das",
     role: "AI Engineer",
     description: "Machine learning specialist building intelligent systems and automation. Passionate about pushing the boundaries of artificial intelligence.",
-    image: "",
+    image: teamMember3Img,
     socials: { linkedin: "#", twitter: "#" },
   },
   {
