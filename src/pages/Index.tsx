@@ -36,12 +36,14 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <TeamSection />
-      <TestimonialsSection />
-      <ContactSection />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <TeamSection />
+        <TestimonialsSection />
+        <ContactSection />
+      </main>
       <Footer />
     </div>
   );
