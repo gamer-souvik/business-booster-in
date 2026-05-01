@@ -75,7 +75,13 @@ const HeroSection = () => {
               </p>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="sr-only">Business Booster — Digital Marketing & Branding Agency in India</h1>
+
+            <p className="text-2xl md:text-3xl font-cyber font-bold text-gradient-cyber tracking-wider">
+              BUSINESS BOOSTER
+            </p>
+
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <span className="text-foreground block">TRANSFORM YOUR</span>
               <span 
                 className="text-gradient-cyber block glitch-text flicker" 
@@ -84,7 +90,7 @@ const HeroSection = () => {
                 DIGITAL EMPIRE
               </span>
               <span className="text-foreground block">WITH AI</span>
-            </h1>
+            </h2>
             
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl font-body leading-relaxed">
               Harness the power of artificial intelligence and cutting-edge digital marketing 
