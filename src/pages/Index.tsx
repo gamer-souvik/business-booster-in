@@ -8,6 +8,8 @@ import TeamSection from '@/components/TeamSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
+import InternalLinks from '@/components/InternalLinks';
 
 const Index = () => {
   useEffect(() => {
@@ -35,6 +37,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Business Booster | Digital Marketing & Branding Agency India"
+        description="Business Booster — a futuristic digital marketing agency offering SEO, social media, branding, web development & growth strategies to scale your business."
+        canonical="https://business-booster.in/"
+      />
       <Navbar />
       <main>
         <HeroSection />
@@ -43,6 +50,7 @@ const Index = () => {
         <TeamSection />
         <TestimonialsSection />
         <ContactSection />
+        <InternalLinks exclude="/" />
       </main>
       <Footer />
     </div>

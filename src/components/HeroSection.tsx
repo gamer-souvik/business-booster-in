@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -98,9 +99,9 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <a href="#services" className="btn-cyber hover-scale">
+              <Link to="/services" className="btn-cyber hover-scale">
                 <span className="relative z-10">EXPLORE SERVICES</span>
-              </a>
+              </Link>
               <a href="https://wa.me/+919932702906" target="_blank" rel="noopener noreferrer" className="btn-cyber-outline hover-scale">
                 <span className="relative z-10">GET IN TOUCH</span>
               </a>
