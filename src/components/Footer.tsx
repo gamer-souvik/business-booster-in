@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -13,14 +15,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6">
-            <a href="/" className="group flex items-baseline gap-1">
+            <Link to="/" className="group flex items-baseline gap-1">
               <span className="text-2xl font-bold tracking-wider font-cyber text-gradient-cyber">
                 BUSINESS
               </span>
               <span className="text-2xl font-light tracking-wider font-cyber text-foreground">
                 BOOSTER
               </span>
-            </a>
+            </Link>
             <p className="text-muted-foreground font-body leading-relaxed">
               Transforming businesses through innovative AI solutions and strategic digital marketing.
             </p>
@@ -52,9 +54,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {['AI Solutions', 'Predictive Analytics', 'NLP & Conversational AI', 'SEO Optimization', 'Content Marketing', 'Social Media Strategy'].map((item) => (
                 <li key={item}>
-                  <a href="#services" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-link font-body">
+                  <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-link font-body">
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -65,16 +67,16 @@ const Footer = () => {
             <h3 className="text-sm font-bold mb-6 font-cyber uppercase tracking-widest text-gradient">Company</h3>
             <ul className="space-y-3">
               {[
-                { label: 'About Us', href: '#about' },
-                { label: 'Our Work', href: '#work' },
-                { label: 'Careers', href: '#' },
-                { label: 'Team', href: '#' },
-                { label: 'Contact', href: '#contact' },
+                { label: 'About Us', to: '/about' },
+                { label: 'Services', to: '/services' },
+                { label: 'Team', to: '/team' },
+                { label: 'Testimonials', to: '/testimonials' },
+                { label: 'Contact', to: '/contact' },
               ].map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-link font-body">
+                  <Link to={item.to} className="text-muted-foreground hover:text-primary transition-colors duration-300 hover-link font-body">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

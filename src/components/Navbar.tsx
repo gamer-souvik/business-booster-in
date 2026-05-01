@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+
+const NAV_ITEMS = [
+  { label: 'Services', to: '/services' },
+  { label: 'About', to: '/about' },
+  { label: 'Team', to: '/team' },
+  { label: 'Testimonials', to: '/testimonials' },
+  { label: 'Contact', to: '/contact' },
+];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +37,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
-          <a href="/" className="group flex items-baseline gap-1">
+          <Link to="/" className="group flex items-baseline gap-1">
             <span className="text-2xl font-bold tracking-wider font-cyber text-gradient-cyber group-hover:animate-glitch">
               BUSINESS
             </span>
@@ -36,27 +45,24 @@ const Navbar = () => {
               BOOSTER
             </span>
             <span className="text-xs font-bold text-accent neon-text-magenta">.IN</span>
-          </a>
+          </Link>
 
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
-              {['Services', 'About', 'Team', 'Testimonials', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href={`#${item.toLowerCase()}`} 
+              {NAV_ITEMS.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    to={item.to}
                     className="relative py-2 text-sm font-semibold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors duration-300 hover-link"
                   >
-                    {item}
-                  </a>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
               <li>
-                <a 
-                  href="#contact" 
-                  className="btn-cyber text-xs py-2 px-4"
-                >
+                <Link to="/contact" className="btn-cyber text-xs py-2 px-4">
                   START PROJECT
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -91,25 +97,25 @@ const Navbar = () => {
       )}>
         <div className="container px-6 py-8">
           <ul className="flex flex-col gap-6">
-            {['Services', 'About', 'Team', 'Testimonials', 'Contact'].map((item, index) => (
+            {NAV_ITEMS.map((item, index) => (
               <li 
-                key={item}
+                key={item.label}
                 className="opacity-0 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <a 
-                  href={`#${item.toLowerCase()}`} 
+                <Link
+                  to={item.to}
                   className="text-lg font-semibold uppercase tracking-widest text-foreground hover:text-primary hover:neon-text-cyan transition-all duration-300" 
                   onClick={toggleMenu}
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               </li>
             ))}
             <li className="opacity-0 animate-fade-in pt-4" style={{ animationDelay: '0.4s' }}>
-              <a href="#contact" className="btn-cyber text-sm w-full justify-center" onClick={toggleMenu}>
+              <Link to="/contact" className="btn-cyber text-sm w-full justify-center" onClick={toggleMenu}>
                 START PROJECT
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
